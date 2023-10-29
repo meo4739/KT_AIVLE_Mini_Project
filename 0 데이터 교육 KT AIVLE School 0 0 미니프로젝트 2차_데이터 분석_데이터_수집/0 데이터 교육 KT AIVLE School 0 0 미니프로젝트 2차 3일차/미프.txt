@@ -1,0 +1,74 @@
+1>모든 문자가 숫자인지를 확인하기 위해 사용되는 함수는 무엇인가요?
+1) isalpha
+2) isnumeric
+3) isalnum
+4) decimal
+
+
+2>수치형 데이터를 구간으로 나눠 범주형 데이터 만들려고 합니다. 이때 사용되는 함수는 무엇인가요?
+1) cut
+2) value_counts
+3) pivot
+4) merge
+
+
+3> 두 수치형 데이터간의 상관관계와 추세선을 확인할 수 있는 그래프 분석은 무엇인가요?
+1) scatter plot
+2) regplot
+3) violet plot
+4) kde plot
+
+4> 두 수치형 데이터간의 상관계수와 P-value 확인할 수 있는 상관분석 함수는 무엇인가요?
+1) ttest_ind
+2) f_oneway
+3) corr
+4) pearsonr
+
+
+6> 범주형 데이터의 시각화에 사용되는 함수는 무엇인가요?
+1) kde plot
+2) count plot
+3) histogram
+4) scatter plot
+
+7>수치형 데이터의 기초 통계량(describe)에서 알 수 있는 내용이 아닌 것은 무엇인가요?
+1) 평균값
+2) 중앙값
+3) 최빈수
+4) 표준편차
+
+
+8> 범주형 데이터의 각 카테고리별 빈도수를 알려주는 함수는 무엇인가요?
+1) info
+2) value_counts
+3) corr
+4) display
+
+9> pivot table 형태의 데이터프레임을 구분자와 값(value)로 재구성해주는 pandas의 함수는 무엇인가요?
+1) groupby
+2) pivot_table
+3) melt
+4) agg
+
+10>평균분석, 분산분석 등 이변량 데이터의 통계적 분석을 위해 사용되는 라이브러리는 무엇인가요?
+1) seaborn
+2) pandas
+3) scipy
+4) numpy
+
+
+
+
+3> 두 수치형 데이터간의 상관관계와 추세선을 확인할 수 있는 그래프 분석은 무엇인가요?
+1) scatter plot
+2) regplot
+3) violet plot
+4) kde plot
+
+
+
+9> pivot table 형태의 데이터프레임을 구분자와 값(value)로 재구성해주는 pandas의 함수는 무엇인가요?
+1) groupby
+2) pivot_table
+3) melt
+4) agg

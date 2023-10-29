@@ -1,0 +1,35 @@
+print('='*100, '\n이변량 분석', sep='')
+print('귀무가설 : 집단 평균 간에 유의미한 차이가 없다.')
+print('대립가설 : 집단 평균 간에 유의미한 차이가 있다.')
+print('p-value가 0.05다 크면 귀무가설 채택')
+print('='*100,'\n')
+
+print('-'*100)
+print('3-2-1 Gender - M, F')
+display(spst.ttest_ind(t_male, t_female))
+
+print('-'*100)
+print('3-2-2 학습목표 - 자기계발, 승진, 취업')
+display(spst.f_oneway(t_target_anova_1,t_target_anova_2,t_target_anova_3))
+
+print('-'*100)
+print('3-2-3 학습방법 - 온라인 강의, 참고서 학습방법, 오프라인 강의')
+display(spst.f_oneway(t_how_anova_1, t_how_anova_2, t_how_anova_3))
+
+print('-'*100)
+print('3-2-4 강의 학습 교재 유형 - 영상 교재, 뉴스/이슈 기반 교재, 일반적인 영어 텍스트 기반 교재, 비즈니스 시뮬레이션(Role Play)')
+display(spst.f_oneway(t_type_anova_1,t_type_anova_2, t_type_anova_3, t_type_anova_4))
+
+print('-'*100)
+print('3-2-5 학습빈도 - 주1-2회, 주3-4회, 주5-6회, 매일(주 7회)')
+display(spst.f_oneway(t_freq_anova_1,t_freq_anova_2, t_freq_anova_3, t_freq_anova_4))
+
+print('-'*100)
+print('3-2-6 취약 분야 인지 여부 - 알고 있음, 알고 있지 않음')
+display(spst.ttest_ind(t_yes, t_no))
+
+
+print('='*100, '\n통계 분석', sep='')
+print('='*100)
+
+print('현재 Gender를 제외하고 p-value < 0.5 이므로 귀무가설 기각 집단 평균 간에 유의미한 차이가 존재한다.')

@@ -1,0 +1,76 @@
+**************** 단변량 *********************
+
+2-2) 수치형 데이터
+
+2-2-1) 총 세대수
+
+plt.title('data에서의 총세대수 histogram')
+sns.histplot( x='총세대수', data = data  , kde=True)
+plt.grid()
+
+
+plt.title('data에서의 총세대수 박스플랏')
+sns.boxplot(   x='총세대수', data = data  )
+plt.grid()
+
+2-2-2) 공가수
+
+plt.title('data에서의 공가수 histogram')
+sns.histplot(  x = '공가수', data = data , kde=True )
+plt.grid()
+
+
+plt.title('data에서의 공가수 박스플랏')
+sns.boxplot(x = '공가수', data = data      )
+plt.grid()
+
+
+
+ 2-2-3) 지하철역 수
+
+plt.title('data에서의 지하철역수 histogram')
+sns.histplot(  x = '지하철역수', data = data, kde=True  )
+plt.grid()
+
+plt.title('data에서의 지하철역수 박스플랏')
+sns.boxplot(x = '지하철역수', data = data      )
+plt.grid()
+
+
+
+ 2-2-4) 버스정류장수
+
+
+plt.title('data에서의 버스정류장수 histogram')
+sns.histplot(  x = '버스정류장수', data = data, kde=True  )
+plt.grid()
+
+
+plt.title('data에서의 버스정류장수 박스플랏')
+sns.boxplot(x = '버스정류장수', data = data      )
+plt.grid()
+
+
+
+ 2-2-5) 임대료
+
+plt.title('data에서의 임대료 histogram')
+sns.histplot(  x = '임대료', data = data, kde=True  )
+plt.grid()
+
+
+plt.title('data에서의 임대료 박스플랏')
+sns.boxplot(x = '임대료', data = data      )
+plt.grid()
+
+
+2-2-6) 임대보증금
+
+plt.title('data에서의 임대보증금 histogram')
+sns.histplot(  x = '임대보증금', data = data, kde=True  )
+plt.grid()
+
+
+plt.title('data에서의 임대보증금 박스플랏')
+sns.boxplot(x = '임대보증금', data = data      )
+plt.grid()

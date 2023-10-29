@@ -1,0 +1,103 @@
+print('='*50)
+print('상관계수 분석')
+print('p-value가 0.05보다 작을수록 상관관계가 크다')
+
+keys = []
+spst_list=[]
+spst_dict = {}
+    
+for i in df.columns:
+    if ( (df[i].dtypes=='int64') | ( df[i].dtypes =='float64' )):
+    
+        keys.append(i)
+    
+
+    
+for i in keys:
+    spst_list.append(list(spst.pearsonr(df[i], df['등록차량수'] ))[1])
+    
+spst_dict = dict(zip(keys, spst_list))
+
+    
+spst_dict = sorted( spst_dict.items(), key = lambda x : x[1])
+    
+
+for key, value in spst_dict:
+    print(f'{key}:{value}')
+    
+print('\n')
+print('='*50)
+print("상위 5개 : \n1.총세대수, 2. 전용면적_50_100, 3. 임대료, \n4. 임대보증금, 5. 전용면적_40_50")
+
+
+***********************************************************************************************
+analyze_features =  [ '총세대수', '전용면적_50_100', '임대료', 
+'임대보증금', '전용면적_40_50' ]
+target = '등록차량수'
+df = data
+
+for feature in analyze_features:
+
+    print(f"[{feature}] 통계 분석 및 그래프 분석")
+
+
+
+
+
+    # 통계 분석 : 통계 분석
+
+    print("   ***** 통계 분석 *****")
+
+    ## 코드 입력
+    result = spst.pearsonr(df[feature], df['등록차량수'] )
+    
+    print(feature, " vs ", target, " 상관 분석: ", result)
+    
+    if result[1] > 0.05:
+        print(f"통계분석 결과 : {feature}는 등록차량수에 영향을 주지 않는다")
+    else:
+        print(f"통계분석 결과 : {feature}는 등록차량수에 영향을 준다")
+
+    # 그래프 분석 : regplot
+
+    # plt.figure(figsize = (12,8))
+    print("   ***** 그래프 분석 *****")
+    
+    ## 코드 입력
+    sns.regplot(  x=feature, y = target, data =df         )
+    plt.grid()
+    plt.show()
+    
+    print("")
+    print("-"*50)
+
+
+
+***********************************************************************************************
+
+print('='*50)
+print("data에서 수치형 컬럼만 뽑아서 <data_number>로 정의")
+data_number = data.loc[:,['총세대수','공가수','지하철역수','버스정류장수', '등록차량수','전용면적_10_30', '전용면적_30_40', '전용면적_40_50', '전용면적_50_100',
+            '전용면적_100이상', '임대보증금', '임대료', '상가비율','아파트비율', '공급유형_공공임대비율', '공급유형_국민임대비율', '공급유형_영구임대비율',
+       '공급유형_임대상가비율', '공급유형_장기전세비율', '공급유형_행복주택비율']]
+display(data_number)
+
+print('='*50)
+print("<data_number> 상관계수")
+display(data_number.corr())
+
+
+******************************************************
+
+## 각 컬럼간 상관계수에 대한 heatmap 그래프 분석
+
+plt.figure(figsize = (40,20))
+## 코드 입력
+
+sns.heatmap( data_number.corr(),
+            annot=True,
+            annot_kws = {'size':25},
+            cmap = sns.light_palette('gray', as_cmap=True),
+            fmt = '.4f')
+plt.show()
+
