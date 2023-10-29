@@ -1,0 +1,16 @@
+tGravityAcc
+fBodyAcc
+fBodyBodyGyroMag
+fBodyGyro
+tBodyAccJerk
+tBodyAccMag
+tBodyAcc
+fBodyAccJerk
+fBodyAccMag
+fBodyBodyAccJerkMag
+tBodyGyroJerk
+angle
+tBodyGyro
+tBodyAccJerkMag
+tBodyGyroMag
+fBodyBodyGyroJerkMag
