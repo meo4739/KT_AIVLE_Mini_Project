@@ -1,0 +1,9 @@
+
+http://apis.data.go.kr/B552657/ErmctInfoInqireService/getEmrrmRltmUsefulSckbdInfoInqire
+
+STAGE1 = 전라북도
+STAGE2 = 전주시
+
+
+
+http://apis.data.go.kr/B552657/ErmctInfoInqireService/getEmrrmRltmUsefulSckbdInfoInqire?STAGE1=전라북도&STAGE2=전주시
